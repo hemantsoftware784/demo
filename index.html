@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanwariya Vastraly | Premium Clothing Brand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold tracking-tight font-serif">
+                        <span class="text-gray-900">Sanwariya</span>
+                        <span class="text-amber-600">Vastraly</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-amber-600 transition-colors font-medium">Home</a>
+                    <a href="#collection" class="text-gray-700 hover:text-amber-600 transition-colors font-medium">Collection</a>
+                    <a href="#about" class="text-gray-700 hover:text-amber-600 transition-colors font-medium">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-amber-600 transition-colors font-medium">Contact</a>
+                </div>
+
+                <!-- Icons -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <button class="text-gray-700 hover:text-amber-600 transition-colors" aria-label="Search">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </button>
+                    <button class="text-gray-700 hover:text-amber-600 transition-colors relative" aria-label="Cart" id="cartBtn">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        <span class="absolute -top-2 -right-2 bg-amber-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center" id="cartCount">0</span>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700 hover:text-amber-600" id="mobileMenuBtn">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white border-t border-gray-100" id="mobileMenu">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-amber-600 hover:bg-gray-50 rounded-md">Home</a>
+                <a href="#collection" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-amber-600 hover:bg-gray-50 rounded-md">Collection</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-amber-600 hover:bg-gray-50 rounded-md">About</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-amber-600 hover:bg-gray-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-20 min-h-screen flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img src="http://static.photos/fashion/1200x630/42" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="max-w-2xl">
+                <span class="inline-block py-1 px-3 rounded-full bg-amber-600/20 text-amber-400 text-sm font-semibold mb-6 backdrop-blur-sm">
+                    New Collection 2024
+                </span>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+                    Elevate Your Style with <span class="text-amber-500">Sanwariya Vastraly</span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 leading-relaxed">
+                    Discover premium quality clothing crafted with precision and passion. Where tradition meets contemporary fashion.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#collection" class="inline-flex items-center justify-center px-8 py-4 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-all transform hover:scale-105">
+                        Shop Now
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                    <a href="#about" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all">
+                        Our Story
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600">
+                        <i data-lucide="truck" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Free Shipping</h3>
+                        <p class="text-sm text-gray-600">On orders over $100</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Premium Quality</h3>
+                        <p class="text-sm text-gray-600">100% authentic fabrics</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600">
+                        <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Easy Returns</h3>
+                        <p class="text-sm text-gray-600">30-day return policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section id="collection" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Our Collection</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our curated selection of premium clothing designed for the modern individual who values quality and style.</p>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mt-8 items-center">
+                    <button class="filter-btn active px-6 py-2 rounded-full border-2 border-amber-600 bg-amber-600 text-white font-medium transition-all" data-filter="all">All</button>
+                    <button class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-amber-600 hover:text-amber-600 transition-all" data-filter="men">Men</button>
+                    <button class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-amber-600 hover:text-amber-600 transition-all" data-filter="women">Women</button>
+                    <button class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-amber-600 hover:text-amber-600 transition-all" data-filter="accessories">Accessories</button>
+                    <button id="addProductBtn" class="ml-4 px-6 py-2 rounded-full border-2 border-green-600 text-green-600 font-medium hover:bg-green-600 hover:text-white transition-all flex items-center gap-2">
+                        <i data-lucide="plus" class="w-5 h-5"></i>
+                        Add Product
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="productsGrid">
+                <!-- Empty state message when no products -->
+                <div id="emptyState" class="col-span-full text-center py-16">
+                    <div class="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="package" class="w-12 h-12 text-gray-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">No Products Yet</h3>
+                    <p class="text-gray-600 mb-6">Start by adding your first product to the collection.</p>
+                    <button onclick="openAddProductModal()" class="inline-flex items-center px-6 py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors">
+                        <i data-lucide="plus" class="w-5 h-5 mr-2"></i>
+                        Add Your First Product
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="inline-flex items-center px-8 py-3 border-2 border-gray-900 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white transition-all">
+                    View All Products
+                    <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="http://static.photos/workspace/640x360/9" alt="About Bairwa Brothers" class="rounded-xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-amber-600 p-6 rounded-xl shadow-xl">
+                        <p class="text-3xl font-bold">15+</p>
+                        <p class="text-sm opacity-90">Years of Excellence</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-amber-500 font-semibold tracking-wider uppercase text-sm">Our Story</span>
+                    <h2 class="text-4xl font-serif font-bold mt-2 mb-6">Crafting Fashion with Passion Since 2009</h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Sanwariya Vastraly was founded with a vision to provide premium quality clothing that combines traditional craftsmanship with modern aesthetics. Our journey began in a small workshop and has grown into a beloved brand known for excellence.
+                    </p>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        Every piece in our collection is meticulously crafted using the finest materials, ensuring comfort, durability, and style that stands the test of time.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-amber-500">50K+</p>
+                            <p class="text-sm text-gray-400 mt-1">Happy Customers</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-amber-500">200+</p>
+                            <p class="text-sm text-gray-400 mt-1">Products</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-amber-500">30+</p>
+                            <p class="text-sm text-gray-400 mt-1">Countries</p>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="inline-flex items-center text-amber-500 font-semibold hover:text-amber-400 transition-colors">
+                        Learn More About Us
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Don't just take our word for it. Here's what our valued customers have to say about their experience with Bairwa Brothers.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"The quality of the suits is exceptional. I've been a loyal customer for 3 years now and have never been disappointed. The fit is perfect and the fabric feels luxurious."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/200x200/10" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Rajesh Kumar</h4>
+                            <p class="text-sm text-gray-500">Business Owner, Delhi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Amazing collection for women! The evening dress I ordered was stunning and received so many compliments. Fast shipping and excellent customer service."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/200x200/11" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Priya Sharma</h4>
+                            <p class="text-sm text-gray-500">Fashion Blogger, Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star-half" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Bairwa Brothers has become my go-to brand for formal wear. The attention to detail is remarkable. Highly recommend their custom tailoring service."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/200x200/12" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Amit Patel</h4>
+                            <p class="text-sm text-gray-500">Lawyer, Ahmedabad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-20 bg-amber-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Join Our Newsletter</h2>
+            <p class="text-amber-100 mb-8 text-lg">Subscribe to get exclusive offers, early access to new collections, and style tips delivered to your inbox.</p>
+            
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                <input type="email" placeholder="Enter your email address" class="flex-1 px-6 py-4 rounded-lg border-0 focus:ring-2 focus:ring-white text-gray-900 placeholder-gray-400" required>
+                <button type="submit" class="px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors flex items-center justify-center">
+                    Subscribe
+                    <i data-lucide="send" class="ml-2 w-5 h-5"></i>
+                </button>
+            </form>
+            
+            <p class="text-amber-200 text-sm mt-4">No spam, unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Contact Us</span>
+                    <h2 class="text-4xl font-serif font-bold text-gray-900 mt-2 mb-6">Get in Touch</h2>
+                    <p class="text-gray-600 mb-8">Have questions about our products or need styling advice? We're here to help you look your best.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mr-4">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Visit Our Store</h3>
+                                <p class="text-gray-600">123 Fashion Street, Connaught Place<br>New Delhi, India 110001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mr-4">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Call Us</h3>
+                                <p class="text-gray-600">+91 94135 54799<br>+91 98765 43210<br>Mon-Sat, 10am - 8pm IST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mr-4">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Email Us</h3>
+                                <p class="text-gray-600">support@sanwariyavastraly.com<br>orders@sanwariyavastraly.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <form onsubmit="event.preventDefault(); alert('Message sent successfully! We will get back to you soon.');" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                                <option>General Inquiry</option>
+                                <option>Order Status</option>
+                                <option>Return/Exchange</option>
+                                <option>Custom Tailoring</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors flex items-center justify-center">
+                            Send Message
+                            <i data-lucide="send" class="ml-2 w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="#" class="text-2xl font-bold tracking-tight font-serif text-white mb-4 block">
+                        <span>Sanwariya</span>
+                        <span class="text-amber-500">Vastraly</span>
+                    </a>
+                    <p class="text-gray-400 mb-4">Premium clothing brand dedicated to quality, style, and customer satisfaction since 2009.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-amber-500 transition-colors">Home</a></li>
+                        <li><a href="#collection" class="hover:text-amber-500 transition-colors">Shop</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-amber-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">Track Order</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">Returns & Exchanges</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">We Accept</h4>
+                    <div class="flex space-x-3">
+                        <div class="bg-white/10 p-2 rounded">
+                            <i data-lucide="credit-card" class="w-6 h-6"></i>
+                        </div>
+                        <div class="bg-white/10 p-2 rounded">
+                            <i data-lucide="wallet" class="w-6 h-6"></i>
+                        </div>
+                        <div class="bg-white/10 p-2 rounded">
+                            <i data-lucide="banknote" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">&copy; 2024 Sanwariya Vastraly. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+                    <a href="#" class="hover:text-amber-500 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-amber-500 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Product Modal -->
+    <div id="addProductModal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeAddProductModal()"></div>
+        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-lg bg-white shadow-2xl rounded-2xl max-h-[90vh] overflow-y-auto">
+            <div class="p-6 border-b border-gray-100 flex items-center justify-between">
+                <h2 class="text-2xl font-bold text-gray-900">Add New Product</h2>
+                <button onclick="closeAddProductModal()" class="text-gray-500 hover:text-gray-700">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <form id="addProductForm" class="p-6 space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Product Name *</label>
+                    <input type="text" id="productName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Enter product name" required>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Price ($) *</label>
+                        <input type="number" id="productPrice" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="0.00" min="0" step="0.01" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Category *</label>
+                        <select id="productCategory" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent" required>
+                            <option value="men">Men</option>
+                            <option value="women">Women</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Product Image</label>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-4">
+                            <label class="flex-1 cursor-pointer">
+                                <input type="file" id="productImageFile" accept="image/*" class="hidden" onchange="previewImage(this, 'file')">
+                                <div class="w-full px-4 py-3 rounded-lg border-2 border-dashed border-gray-300 hover:border-amber-500 transition-colors text-center">
+                                    <i data-lucide="upload" class="w-6 h-6 mx-auto mb-2 text-gray-400"></i>
+                                    <span class="text-sm text-gray-600">Upload Photo</span>
+                                </div>
+                            </label>
+                            <span class="text-gray-400">or</span>
+                            <input type="url" id="productImageUrl" class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Image URL" oninput="previewImage(this, 'url')">
+                        </div>
+                        <div id="imagePreview" class="hidden relative w-full h-48 bg-gray-100 rounded-lg overflow-hidden">
+                            <img id="previewImg" src="" alt="Preview" class="w-full h-full object-cover">
+                            <button type="button" onclick="clearImagePreview()" class="absolute top-2 right-2 p-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors">
+                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Description</label>
+                    <textarea id="productDescription" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Product description..."></textarea>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="productNew" class="w-4 h-4 text-amber-600 rounded focus:ring-amber-500">
+                    <label for="productNew" class="text-sm text-gray-700">Mark as New Arrival</label>
+                </div>
+
+                <div class="flex gap-4 pt-4">
+                    <button type="button" onclick="closeAddProductModal()" class="flex-1 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+                        Cancel
+                    </button>
+                    <button type="submit" class="flex-1 py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors flex items-center justify-center">
+                        <i data-lucide="plus" class="w-5 h-5 mr-2"></i>
+                        Add Product
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeCart()"></div>
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl transform transition-transform duration-300 translate-x-full" id="cartSidebar">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between p-6 border-b border-gray-100">
+                    <h2 class="text-xl font-bold text-gray-900">Shopping Cart</h2>
+                    <button onclick="closeCart()" class="text-gray-500 hover:text-gray-700">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <div class="flex-1 overflow-y-auto p-6" id="cartItems">
+                    <p class="text-gray-500 text-center py-8">Your cart is empty</p>
+                </div>
+                <div class="border-t border-gray-100 p-6 space-y-4">
+                    <div class="flex justify-between text-lg font-semibold">
+                        <span>Total</span>
+                        <span id="cartTotal">$0</span>
+                    </div>
+                    <button class="w-full py-4 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors" onclick="alert('Checkout functionality coming soon!')">
+                        Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-gray-900 text-white px-6 py-4 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center">
+        <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3"></i>
+        <span id="toastMessage">Item added to cart!</span>
+    </div>
+
+    <script src="script.js"></script>
+<script src="https://deepsite.hf.co/deepsite-badge.js"></script>
+</body>
+</html>
