@@ -1,3 +1,231 @@
+/* Custom Styles for Sanwariya Vastraly */
+
+:root {
+    --primary-color: #d97706;
+    --primary-hover: #b45309;
+    --secondary-color: #111827;
+    --text-color: #374151;
+    --bg-light: #f9fafb;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d97706;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b45309;
+}
+
+/* Navbar Transition */
+#navbar {
+    transition: all 0.3s ease;
+}
+
+#navbar.scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+/* Product Card Hover Effects */
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Filter Button Active State */
+.filter-btn.active {
+    background-color: #d97706;
+    border-color: #d97706;
+    color: white;
+}
+
+/* Mobile Menu Animation */
+#mobileMenu {
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobileMenu.open {
+    max-height: 400px;
+}
+
+/* Cart Sidebar Animation */
+#cartSidebar {
+    transition: transform 0.3s ease-in-out;
+}
+
+#cartSidebar.open {
+    transform: translateX(0);
+}
+
+/* Toast Animation */
+#toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Image Loading Animation */
+img {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+img[src=""] {
+    opacity: 0;
+}
+
+/* Focus Styles for Accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #d97706;
+    outline-offset: 2px;
+}
+
+/* Loading State for Buttons */
+button.loading {
+    position: relative;
+    color: transparent;
+}
+
+button.loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hero Section Parallax Effect */
+#home {
+    background-attachment: fixed;
+}
+
+/* Fade In Animation for Sections */
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Selection Color */
+::selection {
+    background-color: #d97706;
+    color: white;
+}
+
+/* Responsive Typography Adjustments */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Prevent Text Selection on UI Elements */
+button,
+nav a,
+.filter-btn {
+    user-select: none;
+}
+
+/* Stagger Animation for Grid Items */
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Add Product Modal Styles */
+#addProductModal .absolute.left-1\/2 {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#addProductModal::-webkit-scrollbar {
+    width: 6px;
+}
+
+#addProductModal::-webkit-scrollbar-thumb {
+    background: #d97706;
+    border-radius: 3px;
+}
+
+/* Custom Product Badge Animation */
+.product-card[data-id] .absolute.top-4.right-4 {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* File Upload Hover Effect */
+label.cursor-pointer:hover .border-dashed {
+    border-color: #d97706;
+    background-color: #fff7ed;
+}
+
+/* Delete Button Hover */
+button[onclick^="deleteProduct"]:hover {
+    transform: scale(1.1);
+}
+
 body {
 	padding: 2rem;
 	font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
@@ -26,4 +254,3 @@ p {
 .card p:last-child {
 	margin-bottom: 0;
 }
-
